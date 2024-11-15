@@ -1,0 +1,61 @@
+.row-header{
+  margin: 0px auto;
+  padding: 0px auto;
+}
+
+.row-content{
+  margin: 0px auto;
+  padding: 50px 0px 50px 0px;
+  border-bottom: 1px ridge;
+  min-height: 400px;
+}
+
+.footer{
+  background: #0b0a0a;
+  margin: 0px auto;
+  padding: 20px 0px 20px 0px;
+  color: floralwhite
+}
+
+.jumbotron{
+  margin: 0px auto;
+  padding: 10px 30px 40px 30px;  
+  background: #0f0f0f;
+  color: floralwhite
+}
+
+address{
+  font-size:80%;
+  margin:0px;
+  color:#0f0f0f;
+  color: floralwhite
+}
+
+address-black{
+  font-size:80%;
+  margin:0px;
+  color:#0f0f0f;
+  color: #050505
+}
+
+.navbar-dark{
+  background-color: #512;
+}
+
+a:link {
+  color: #adafad;
+  text-decoration: none
+}
+
+a:hover {
+  color: #960909;
+}
+
+
+
+
+.menu-image {
+  width: 750px;
+  height: 750px;
+  object-fit: contain; /* Ajusta la imagen dentro del contenedor sin recortar */
+}
