@@ -7,9 +7,10 @@ function RenderMenuItem({ equipo}) {
         <div key={equipo.id}>
             <Card>
                 <Link to={`/menu/${equipo.id}`}>
-                    <CardImg width="90%" src={equipo.image} alt={equipo.name} />
+                    <CardImg 
+                        width="90%"className="menu-image" src={equipo.image} alt={equipo.name} />
                     <CardImgOverlay>
-                        <CardTitle tag="h5">{equipo.name}</CardTitle>
+                    <CardTitle tag="h5" style={{ color: "black" }}>{equipo.name}</CardTitle>
                     </CardImgOverlay>
                 </Link>
             </Card>
@@ -30,10 +31,10 @@ const Menu = (props) => {
             <div className="row">
                 <Breadcrumb>
                     <BreadcrumbItem><Link to="/home">Inicio</Link></BreadcrumbItem>
-                    <BreadcrumbItem active>Menu</BreadcrumbItem>
+                    <BreadcrumbItem active>Equipo</BreadcrumbItem>
                 </Breadcrumb>
                 <div className="col-12">
-                    <h3>Menu</h3>
+                    <h3>Equipos</h3>
                     <hr />
                 </div>
             </div>

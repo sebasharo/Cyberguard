@@ -8,7 +8,7 @@ function RenderEquipo({ equipo }) {
             <Card>
                 <CardImg top src={equipo.image} alt={equipo.name} />
                 <CardBody>
-                    <CardTitle><strong>Nombre del plato:</strong> {equipo.name}</CardTitle>
+                    <CardTitle><strong>Nombre del Equipo:</strong> {equipo.name}</CardTitle>
                     <CardText><strong>Descripción:</strong> {equipo.description}</CardText>
                 </CardBody>
             </Card>
@@ -66,7 +66,8 @@ const EquipoDetail = ( props ) => {
         );
 }
 
-export default EquipoDetail
+export default EquipoDetail;
+
 
 
 

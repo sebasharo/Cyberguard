@@ -2,34 +2,35 @@ export const INGS =
     [
         {
             id: 0,
-            name: 'Alain Ducasse',
-            image: '/assets/chef1.jpg',
-            cargo: 'Chef Ejecutivo',
+            name: 'Leon',
+            image: '/assets/1.jpg',
+            cargo: 'Ingeniero en Ciberseguridad',
             featured: true,
-            description: 'Chef francés con 17 estrellas Michelin, considerado el chef vivo con más estrellas Michelin del mundo'
+            description: 'Experto en ciberseguridad con certificaciones avanzadas y amplia experiencia en protección de infraestructuras críticas.'
         },
         {
             id: 1,
-            name: 'Rasmus Munk',
-            image: '/assets/chef2.jpg',
-            cargo: 'Sous Chef',
+            name: 'Tomas',
+            image: '/assets/2.jpg',
+            cargo: 'Ingeniero de Redes',
             featured: false,
-            description: 'Chef danés que fue nombrado el mejor chef del mundo en 2024 por The Best Chef Awards'
+            description: 'Especialista en redes de telecomunicaciones, encargado de diseñar y optimizar redes empresariales de alta demanda.'
         },
         {
             id: 2,
-            name: 'Dabiz Muñoz',
-            image: '/assets/chef3.jpg',
-            cargo: 'Chef de Partie',
+            name: 'Seth',
+            image: '/assets/3.jpg',
+            cargo: 'Ingeniero de Software',
             featured: false,
-            description: 'Chef español que fue nombrado el mejor chef del mundo por tres años consecutivos por The Best Chef Awards'
+            description: 'Desarrollador full-stack con experiencia en proyectos de gran escala y arquitectura de sistemas distribuidos.'
         },
         {
             id: 3,
-            name: 'Albert Adria',
-            image: '/assets/chef4.jpg',
-            cargo: 'Chef Saucier',
+            name: 'Jayce',
+            image: '/assets/1.jpg',
+            cargo: 'Ingeniero de Datos',
             featured: false,
-            description: 'Chef español que quedó en segundo lugar en la lista de The Best Chef Awards 2024'
+            description: 'Especialista en ciencia de datos y aprendizaje automático, dedicado al análisis y optimización de grandes volúmenes de información.'
         }
-    ]
+    ];
+

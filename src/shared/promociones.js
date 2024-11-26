@@ -2,11 +2,11 @@ export const PROMOCIONES =
     [
         {
             id: 0,
-            name: 'Navidenio',
-            image: '/assets/promoNavidad.jpg',
+            name: 'gaming y velocidad ',
+            image: '/assets/Asus ROG Rapture GT-AC5300.jpg',
             label: 'Nuevo',
-            price: '19.99',
+            price: '40.99',
             featured: true,
-            description: 'Promo de Navidad'
+            description: 'Promo hasta agotar stock'
         }
     ]

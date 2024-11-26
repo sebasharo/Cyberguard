@@ -39,7 +39,7 @@ class Header extends Component {
                         <div className="row">
                             <div className="col-3 col-sm-1">
                                 <NavbarToggler onClick={this.toggleNav} />
-                                <NavbarBrand className="mr-auto"><img alt="Resto Pablo" src="./assets/logoPabloL.jpg" height="40" />
+                                <NavbarBrand className="mr-auto"><img alt="Cyberguard" src="./assets/logo.jpg" height="40" />
                                 </NavbarBrand>
                             </div>
                             <div className="col-7 col-sm-5">
@@ -49,7 +49,7 @@ class Header extends Component {
                                             <NavLink className="nav-link" to="/home"><span className="fa fa-home fa-lg"></span>Inicio</NavLink>
                                         </NavItem>
                                         <NavItem>
-                                            <NavLink className="nav-link" to="/menu"><span className="fa fa-coffee fa-lg"></span> Menu</NavLink>
+                                            <NavLink className="nav-link" to="/menu"><span className="fa fa-shopping-cart fa-lg"></span> Equipos</NavLink>
                                         </NavItem>
                                         <NavItem>
                                             <NavLink className="nav-link" to="/about"><span className="fa fa-info fa-lg"></span> Acerca de</NavLink>
@@ -72,8 +72,8 @@ class Header extends Component {
                     <div className='container'>
                         <div className='row row-header'>
                             <div className='col-12 mt-5'>
-                                <h1>Resto Pablo</h1>
-                                <p className='lead'>Bienvenido a nuestro restaurante</p>
+                                <h1>Cyberguard</h1>
+                                <p className='lead'>Bienvenido a nuestra tienda en linea</p>
                             </div>
                         </div>
                     </div>

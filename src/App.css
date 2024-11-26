@@ -55,7 +55,8 @@ a:hover {
 
 
 .menu-image {
-  width: 750px;
-  height: 750px;
-  object-fit: contain; /* Ajusta la imagen dentro del contenedor sin recortar */
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
 }

@@ -1,34 +1,43 @@
 import React, { Component } from 'react';
 import Menu from './MenuComponent';
-import { aparato } from '../shared/aparatos';
-import { COMENTARIOS } from '../shared/comentarios';
-import { PROMOCIONES } from '../shared/promociones';
-import { INGS } from '../shared/ings';
 import Header from './HeaderComponent';
 import Footer from './FooterComponent';
 import Home from './HomeComponent';
-import Contact from './ContactComponent'
+import Contact from './ContactComponent';
 import EquipoDetail from './EquipoDetailComponent';
 import About from './AboutComponent';
-import { Routes, Route, useParams } from 'react-router-dom';
+import { Routes, Route, useParams, useNavigate, useLocation } from 'react-router-dom';
+import { connect } from 'react-redux';
+
+function withRouter(Component) {
+    return function WithRouter(props) {
+        const navigate = useNavigate();
+        const location = useLocation();
+        return <Component {...props} navigate={navigate} location={location} />;
+    };
+}
+
+const mapStateToProps = (state) => {
+    return {
+        aparatos: state.aparatos,
+        comments: state.comments,
+        promotions: state.promotions,
+        ings: state.ings
+    };
+};
+
 class Main extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            aparatos: aparato,
-            comments: COMENTARIOS,
-            promotions: PROMOCIONES,
-            ings: INGS
-        }
     }
 
     render() {
         const HomePage = () => {
             return (
                 <Home
-                    equipo={this.state.aparatos.filter((equipo) => equipo.featured)[0]}
-                    promotion={this.state.promotions.filter((promo) => promo.featured)[0]}
-                    ing={this.state.ings.filter((ing) => ing.featured)[0]}
+                    equipo={this.props.aparatos.filter((equipo) => equipo.featured)[0]}
+                    promotion={this.props.promotions.filter((promo) => promo.featured)[0]}
+                    ing={this.props.ings.filter((ing) => ing.featured)[0]}
                 />
             );
         };
@@ -36,8 +45,9 @@ class Main extends Component {
         const EquipoWithId = () => {
             const params = useParams();
             return (
-                <EquipoDetail equipo={this.state.aparatos.filter((equipo) => equipo.id === parseInt(params.equipoId, 10))[0]}
-                    comments={this.state.comments.filter((comment) => comment.equipoId === parseInt(params.equipoId, 10))}
+                <EquipoDetail
+                    equipo={this.props.aparatos.filter((equipo) => equipo.id === parseInt(params.equipoId, 10))[0]}
+                    comments={this.props.comments.filter((comment) => comment.equipoId === parseInt(params.equipoId, 10))}
                 />
             );
         };
@@ -47,7 +57,7 @@ class Main extends Component {
                 <Header />
                 <Routes>
                     <Route path="/home" element={<HomePage />} />
-                    <Route exact path="/menu" element={<Menu aparatos={this.state.aparatos} />} />
+                    <Route exact path="/menu" element={<Menu aparatos={this.props.aparatos} />} />
                     <Route path="/menu/:equipoId" element={<EquipoWithId />} />
                     <Route path="/contact" element={<Contact />} />
                     <Route path="/acercade" element={<About />} />
@@ -59,4 +69,5 @@ class Main extends Component {
     }
 }
 
-export default Main;
+export default withRouter(connect(mapStateToProps)(Main));
+
