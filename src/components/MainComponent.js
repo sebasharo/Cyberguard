@@ -8,6 +8,7 @@ import EquipoDetail from './EquipoDetailComponent';
 import About from './AboutComponent';
 import { Routes, Route, useParams, useNavigate, useLocation } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { addComment } from '../redux/ActionCreators';
 
 function withRouter(Component) {
     return function WithRouter(props) {
@@ -25,6 +26,10 @@ const mapStateToProps = (state) => {
         ings: state.ings
     };
 };
+
+const mapDispatchToProps = (dispatch) => ({
+    addComment: (equipoId, rating, author, comment) => dispatch(addComment(equipoId, rating, author, comment))
+});
 
 class Main extends Component {
     constructor(props) {
@@ -48,6 +53,7 @@ class Main extends Component {
                 <EquipoDetail
                     equipo={this.props.aparatos.filter((equipo) => equipo.id === parseInt(params.equipoId, 10))[0]}
                     comments={this.props.comments.filter((comment) => comment.equipoId === parseInt(params.equipoId, 10))}
+                    addComment={this.props.addComment}
                 />
             );
         };
@@ -69,5 +75,4 @@ class Main extends Component {
     }
 }
 
-export default withRouter(connect(mapStateToProps)(Main));
-
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Main));
